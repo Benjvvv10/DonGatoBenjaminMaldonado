@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería Don Gato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cafetería Don Gato</h1>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menú</h2>
+            <div class="category" id="cafes">
+                <h3>Cafés</h3>
+                <div class="products"></div>
+            </div>
+            <div class="category" id="postres">
+                <h3>Postres</h3>
+                <div class="products"></div>
+            </div>
+            <div class="category" id="bebidas">
+                <h3>Bebidas Frías</h3>
+                <div class="products"></div>
+            </div>
+        </section>
+        <section id="carrito">
+            <h2>Carrito</h2>
+            <ul id="carrito-lista"></ul>
+            <p>Total: $<span id="total">0</span></p>
+            <button onclick="mostrarPago()">Pagar</button>
+        </section>
+        <section id="pago" class="hidden">
+            <h2>Pago</h2>
+            <form onsubmit="return confirmarPago()">
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Número de Tarjeta" required>
+                <input type="text" placeholder="Vencimiento (MM/AA)" required>
+                <input type="text" placeholder="CVV" required>
+                <button type="submit">Confirmar Pago</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
